@@ -18,7 +18,7 @@ import org.testng.Assert;
 
 @Slf4j
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class SearchPage extends Basetest {
+public class TestRun extends Basetest {
 
     static String price;
     static String info;
