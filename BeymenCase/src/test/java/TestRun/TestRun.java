@@ -78,6 +78,7 @@ public class TestRun extends Basetest {
     @Order(4)
     public void chooseproduct() throws InterruptedException, IOException {
         log.info("Ürünün seçilmesi ve dosya.txt dosyasına yazılması");
+        //Ücret ve ürün bilgisi txt dosyasına yazılmıştır.
         gomlekPage.chooseinput().click();
 
         price = productPage.price();
@@ -126,6 +127,7 @@ public class TestRun extends Basetest {
     public void productIncrease() throws InterruptedException {
 
         log.info("Ürünün adeti artırılır ve kontrol edilir");
+        // Sepetteki miktarla, önceden alınan ücret 2 ile çarpılarak karşılaştırılmıştır.
         String cartprice[] = price.split(" ");
         String cartprice2[] = cartprice[0].split(",");
         double priceone = Double.parseDouble(cartprice2[0]);
@@ -152,6 +154,7 @@ public class TestRun extends Basetest {
 
     @AfterAll
     public static void closedriver(){
+
         driver.quit();
     }
 
